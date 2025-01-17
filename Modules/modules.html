@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    Local Variable
+    <meta class="mktoString" id="headerText" mktoName="Header Text" default="Welcome to Marketo" mktoModuleScope="true">
+    <meta class="mktoImg" id="logoImage" mktoName="Logo Image" default="https://via.placeholder.com/200x50" mktoModuleScope="true">
+    <meta class="mktoColor" id="buttonColor" mktoName="Button Background Color" default="#0073e6" mktoModuleScope="true">
+    <meta class="mktoString" id="ctaLink" mktoName="CTA Link" default="https://www.example.com" mktoModuleScope="true">
+    <meta class="mktoString" id="borderProperty" mktoName="Border" default="1px solid black" mktoModuleScope="true">
+    <!-- align -->
+    <meta class="mktoList" id="tableAlign" mktoName="Vertical alignment" values="left,center,right" default="left" mktoModuleScope="true">
+
+</head>
+
+<body>
+
+    <!-- Editable Header Section -->
+    <table class="mktoContainer" id="headerContainer">
+        <tr>
+            <!-- Logo -->
+            <td>
+                <img class="mktoImg" id="logoImage" src="${logoImage}" alt="Company Logo">
+                <div class="mktoImg" id="logoImage" mktoName="Header logo" mktoImgLink="https://www.marketo.com"> <a><img style="border:${borderProperty};"></a> </div>
+            </td>
+        </tr>
+        <tr>
+            <!-- Editable Text -->
+            <td>
+                <div class="mktoText" id="headerTextArea" mktoName="Header Text">
+                    <h1>${headerText}</h1>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <!-- Feature Module -->
+    <table class="mktoModule" id="featureModule" mktoName="Feature Block">
+        <tr>
+            <td>
+                <div class="mktoText" id="featureTitle" mktoName="Feature Title">
+                    <h2>Feature Title Goes Here</h2>
+                </div>
+                <div class="mktoText" id="featureDescription" mktoName="Feature Description">
+                    <p>Describe your feature in this editable area.</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table align="${tableAlign}" >
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="${ctaLink}" class="button">Click Here</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        
+    </table>
+
+
+</body>
+
+</html>
